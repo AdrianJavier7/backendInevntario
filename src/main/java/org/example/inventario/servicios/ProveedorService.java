@@ -13,6 +13,10 @@ public class ProveedorService {
     @Autowired
     private ProveedorRepository proveedorRepository;
 
+    public Proveedor getProveedorByNombre(String nombre) {
+        return proveedorRepository.findByNombre(nombre);
+    }
+
     public List<Proveedor> getProveedores() {
         return proveedorRepository.findAll();
     }

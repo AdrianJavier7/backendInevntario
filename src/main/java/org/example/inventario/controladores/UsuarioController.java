@@ -25,6 +25,7 @@ public class UsuarioController {
         return usuarioService.getUsuarioById(id);
     }
 
+    // Login
     @PostMapping("/login")
     public Usuario login(@RequestBody LoginDTO usuario) {
         return usuarioService.login(usuario);

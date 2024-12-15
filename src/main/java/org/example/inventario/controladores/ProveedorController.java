@@ -25,7 +25,7 @@ public class ProveedorController {
     }
 
     @PostMapping("/guardar")
-    public Proveedor save(Proveedor proveedor) {
+    public Proveedor save(@RequestBody Proveedor proveedor) {
         return proveedorService.saveProveedor(proveedor);
     }
 

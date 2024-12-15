@@ -26,14 +26,14 @@ public class ProductoController {
         return productoService.getProductoDTOByNombre(nombre);
     }
 
-    @GetMapping("/categoriaDTO/{id}")
+    @GetMapping("/categoriaDTO/{nombre}")
     public List<ProductoDTO> getByCategoriaDTO(@PathVariable String nombre) {
         return productoService.getProductosDTOByCategoria(nombre);
     }
 
-    @GetMapping("/proveedorDTO/{id}")
-    public List<ProductoDTO> getByProveedorDTO(@PathVariable Integer id) {
-        return productoService.getProductosDTOByProveedor(id);
+    @GetMapping("/proveedorDTO/{nombre}")
+    public List<ProductoDTO> getByProveedorDTO(@PathVariable String nombre) {
+        return productoService.getProductosDTOByProveedorNombre(nombre);
     }
 
     @PostMapping("/guardarDTO")
@@ -51,7 +51,7 @@ public class ProductoController {
         return productoService.getProductoByNombre(nombre);
     }
 
-    @GetMapping("/categoria/{id}")
+    @GetMapping("/categoria/{nombre}")
     public List<Producto> getByCategoria(@PathVariable String nombre) {
         return productoService.getProductosByCategoria(nombre);
     }
